@@ -1,0 +1,142 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \{\
+\
+    "TestCaseID" : "TCSHIP002",\
+    "TestDescription" : "Validate Cart Page",\
+    "ExecuteScript" : "Yes",\
+    "Region" : "US",\
+    "ProductFromBuild" : "Yes",\
+    "INLINEURL" : "us/en_us/pd/dri-fit-touch-solid-training-shirt/pid-844013/pgid-844009",\
+    "SHIPDELAYURL" : "us/en_us/pd/benassi-just-do-it-sandal/pid-653518/pgid-582464",\
+    "PREORDERURL" : "us/en_us/pd/swoosh-size-3-mini-basketball/pid-537618/pgid-771646",\
+    "SHOWDAYRANGEURL" : "us/en_us/pd/dri-fit-touch-solid-training-shirt/pid-844013/pgid-844009",\
+    "NikeIDProductPath" : "us/en_us/pd/dri-fit-touch-solid-training-shirt/pid-844013/pgid-844009",\
+    "GiftCardPath" : "/us/en_us/?l=shop,gift_cards",\
+    "TestFlow" : [ \
+        \{\
+            "TestSteps" : "Launch",\
+            "Action" : "LaunchApp"\
+        \}, \
+        \{\
+            "TestSteps" : "Additems",\
+            "Action" : "AddItemsToCart",\
+            "ProductType" : "INLINE+PREORDER",\
+            "ShippingAddressType" : "SINGLE",\
+            "ShippingMethodType" : "STANDARD",\
+            "GCState" : "CA",\
+            "GCZipCode" : "00188",\
+            "GCEmail" : "chala@nike.com",\
+            "PlaceOrderFlag" : "No"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "Login",\
+            "LoginUserID" : "chalapathi.pc@cognizant.com",\
+            "LoginPassword" : "Password123"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "AddPromo",\
+            "PromoCode" : "CSR10POFF"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "ChangeShippingMethod",\
+            "ShippingMethodType" : "NEXTDAY",\
+            "ShippingMethodType" : "STANDARD"\
+        \}, \
+        \{\
+            "TestSteps" : "Additems",\
+            "Action" : "AddItemsToCart",\
+            "ProductType" : "SHIPDELAY+SHOWDAYRANGE",\
+            "ShippingAddressType" : "SINGLE",\
+            "ShippingMethodType" : "STANDARD",\
+            "GCState" : "CA",\
+            "GCZipCode" : "00188",\
+            "GCEmail" : "chala@nike.com",\
+            "PlaceOrderFlag" : "No"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "Validate"\
+        \}, \
+        \{\
+            "TestSteps" : "Profile",\
+            "Action" : "AddShippingAddress",\
+            "ShipFName" : "Chalapathi",\
+            "ShipLName" : "PC",\
+            "ShipAddress1" : "2080 Kalakaua Ave",\
+            "ShipAddress2" : "",\
+            "ShipCity" : "Hawaii",\
+            "ShipState" : "HI",\
+            "ShipZip" : "96815"\
+        \}, \
+        \{\
+            "TestSteps" : "Profile",\
+            "Action" : "AddShippingAddress",\
+            "ShipFName" : "Chala",\
+            "ShipLName" : "Panagla",\
+            "ShipAddress1" : "1 Bowerman Dr",\
+            "ShipAddress2" : "",\
+            "ShipCity" : "Beaverton",\
+            "ShipState" : "OR",\
+            "ShipZip" : "97006"\
+        \}, \
+        \{\
+            "TestSteps" : "Profile",\
+            "Action" : "AddBillingAddress",\
+            "ShipFName" : "Chala",\
+            "ShipLName" : "Panagla",\
+            "ShipAddress1" : "1 Bowerman Dr",\
+            "ShipAddress2" : "",\
+            "ShipCity" : "Beaverton",\
+            "ShipState" : "OR",\
+            "ShipZip" : "97006"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "Checkout",\
+            "PaymentType" : "CC"\
+        \}, \
+        \{\
+            "TestSteps" : "Shipping",\
+            "Action" : "SelectAddress",\
+            "ShipFName" : "Chalapathi",\
+            "ShipLName" : "PC",\
+            "ShipAddress1" : "1 Bowerman Dr",\
+            "ShipAddress2" : "",\
+            "ShipCity" : "Beaverton",\
+            "ShipState" : "OR",\
+            "ShipZip" : "97006"\
+        \}, \
+        \{\
+            "TestSteps" : "Shipping",\
+            "Action" : "Next"\
+        \}, \
+        \{\
+            "TestSteps" : "Billing",\
+            "Action" : "VerifyShippingAddress"\
+        \}, \
+        \{\
+            "TestSteps" : "Billing",\
+            "Action" : "SelectPayment"\
+        \}, \
+        \{\
+            "TestSteps" : "Billing",\
+            "Action" : "Next"\
+        \}, \
+        \{\
+            "TestSteps" : "Review",\
+            "Action" : "VerifyShippingAddress"\
+        \}, \
+        \{\
+            "TestSteps" : "Cart",\
+            "Action" : "RemoveAllItems"\
+        \}\
+    ]\
+\}}
